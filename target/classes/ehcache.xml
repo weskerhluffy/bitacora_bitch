@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+	monitoring="autodetect" dynamicConfig="true">
+
+	<defaultCache maxElementsInMemory="10000" eternal="false"
+		timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true"
+		diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
+		diskPersistent="false" diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU" statistics="false" />
+
+	<cache name="org.hibernate.cache.UpdateTimestampsCache"
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+
+	<!-- Cancelados -->
+	<cache name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Cancelado"
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+	<cache name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Documentacion"
+		maxElementsInMemory="20000" eternal="true" overflowToDisk="true" />
+	<cache
+		name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Cancelado.documentacions"
+		maxElementsInMemory="20000" eternal="true" overflowToDisk="true" />
+	<cache
+		name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Cancelado.canceladosSecundarios"
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+
+	<!-- Holdeados -->
+	<cache name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Holdeado"
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+	<cache
+		name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Holdeado.documentacionHoldeados"
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+
+	<!-- Mensajes -->
+	<cache name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.TipoMensaje"
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+	<cache name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Mensaje"
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+
+	<!-- Procesos retrasados -->
+	<cache
+		name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.ProcesoRetrasado"
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+	<cache
+		name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.ProcesoRetrasado.documentacionProcesoRetrasados"
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+	<cache
+		name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.DocumentacionProcesoRetrasado.procesoRetrasados"
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+
+	<!-- Dias inhabiles -->
+	<cache
+		name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Empresa.diasInhabiles "
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+	<cache name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.DiaInhabil "
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+
+	<!-- Querys -->
+	<cache name="query.canceladosPendientes" maxElementsInMemory="10000"
+		eternal="true" overflowToDisk="true" />
+
+	<cache name="query.canceladosPendientesEmpresaNoAsignados"
+		maxElementsInMemory="10000" eternal="false" overflowToDisk="true"
+		timeToLiveSeconds="150" />
+
+	<cache name="query.holdeadosVigentesBitacora"
+		maxElementsInMemory="10000" eternal="true" overflowToDisk="true" />
+
+	<cache name="query.retrasadosDocumentados" maxElementsInMemory="10000"
+		eternal="true" overflowToDisk="true" />
+</ehcache>

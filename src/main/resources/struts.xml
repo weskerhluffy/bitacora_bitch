@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- Overwrite Convention -->
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.convention.package.locators" value="controller" />
+	<constant name="struts.convention.action.suffix" value="Controller" />
+	<constant name="struts.convention.action.mapAllMatches" value="true" />
+	<constant name="struts.convention.default.parent.package"
+		value="bitacora-ccr" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<constant name="struts.mapper.idParameterName" value="idSel" />
+	<constant name="struts.convention.result.path" value="/contenido" />
+	<constant name="struts.action.excludePattern" value="/dwr.*" />
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.i18n.reload" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.multipart.maxSize" value="2000000000" />
+
+	<package name="bitacora-ccr" extends="rest-default,json-default">
+		<interceptors>
+			<interceptor name="validacionSesion"
+				class="mx.bbva.ccr.intranet.bitacoraProduccion.batch.interceptor.ValidacionSesionInterceptor" />
+			<interceptor-stack name="bitacoraCcrStack">
+				<interceptor-ref name="exception" />
+				<interceptor-ref name="alias" />
+				<interceptor-ref name="servletConfig" />
+				<interceptor-ref name="messages">
+					<param name="operationMode">AUTOMATIC</param>
+				</interceptor-ref>
+				<interceptor-ref name="prepare" />
+				<interceptor-ref name="i18n" />
+				<interceptor-ref name="chain" />
+				<interceptor-ref name="debugging" />
+				<interceptor-ref name="profiling" />
+				<interceptor-ref name="actionMappingParams" />
+				<interceptor-ref name="scopedModelDriven" />
+				<interceptor-ref name="modelDriven">
+					<param name="refreshModelBeforeResult">true</param>
+				</interceptor-ref>
+				<interceptor-ref name="fileUpload">
+					<param name="maximumSize">20000000</param>
+				</interceptor-ref>
+				<interceptor-ref name="checkbox" />
+				<interceptor-ref name="staticParams" />
+				<interceptor-ref name="params">
+					<param name="excludeParams">dojo\..*,^struts\..*</param>
+				</interceptor-ref>
+				<interceptor-ref name="rest" />
+				<interceptor-ref name="conversionError" />
+				<interceptor-ref name="validation">
+					<param name="excludeMethods">input,back,cancel,browse,index,show,edit,editNew</param>
+					<param name="validateAnnotatedMethodOnly">true</param>
+				</interceptor-ref>
+				<interceptor-ref name="jsonValidation" />
+				<interceptor-ref name="restWorkflow">
+					<param name="excludeMethods">input,back,cancel,browse,index,show,edit,editNew</param>
+				</interceptor-ref>
+				<interceptor-ref name="validacionSesion" />
+			</interceptor-stack>
+
+		</interceptors>
+		<default-interceptor-ref name="bitacoraCcrStack" />
+		<global-results>
+			<result name="errorSesion">
+				/contenido/error-sesion.jsps
+			</result>
+		</global-results>
+		<action name="firmarse">
+			<interceptor-ref name="defaultStack" />
+			<result>/contenido/login.jsp</result>
+		</action>
+		<action name="login"
+			class="mx.bbva.ccr.intranet.bitacoraProduccion.batch.controller.LoginController">
+			<interceptor-ref name="defaultStack" />
+			<result type="redirectAction">
+				<param name="actionName">catalogo-usuario</param>
+			</result>
+		</action>
+
+
+		<action name="logoff"
+			class="mx.bbva.ccr.intranet.bitacoraProduccion.batch.controller.LogOffController">
+			<interceptor-ref name="defaultStack" />
+			<result type="redirectAction">
+				<param name="actionName">login</param>
+				/contenido/login.jsp
+			</result>
+		</action>
+
+
+	</package>
+</struts>

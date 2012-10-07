@@ -1,0 +1,414 @@
+
+
+#bodyedituser{
+font-family:”BBVA Office Book”,  Arial;
+font-size:15px;
+text-align:left;
+color:#00A3E4; 
+	
+}
+
+p, h1, form, button{border:0; margin:0; padding:0;}
+.spacer{clear:both; height:15px;}
+.spacer0{clear:both; height:100px;}
+.spacer1{clear:both; height:90px;}
+.spacer1.1{clear:both; height:70px;}
+.spacer2{clear:both; height:50px;}
+.spacer3{clear:both; height:180px;}
+
+/* ----------- My Form ----------- */
+.myform{
+margin:0 auto;
+width:649px;
+padding:14px;
+}
+
+.myformnewuser{
+margin:0 auto;
+width:900px;
+padding:14px;
+}
+
+.editorholdeados2{
+margin:0 auto;
+width:950px;
+padding:14px;
+}
+
+#columproblem{
+	
+	text-align:left;
+}
+
+
+.myformdelete{
+margin:0 auto;
+width:773px;
+padding:14px;
+}
+
+.myformproblem{
+margin:0 auto;
+width:573px;
+padding:52px;
+}
+
+.myformhabiles{
+margin:0 auto;
+width:1017px;
+padding:52px;
+
+
+}
+
+.myformespeciales{
+margin:0 auto;
+width:1015px;
+padding:52px;
+}
+
+.myformnewespeciales{
+margin:0 auto;
+width:648px;
+padding:34px;
+}
+.myindexdocumenta{
+margin:0 auto;
+width:959px;
+font-family:BBVA Office Book,Arial;
+font-size:22px;
+
+}
+
+#formulafont{
+font-family:BBVA Office Light,  Arial;
+font-size:15px;
+color: #555;
+}
+#formulafontdelega{
+font-family:BBVA Office Book,  Arial;
+font-size:17px;
+color: #555;
+
+}
+
+#name{
+	
+	text-align:left;
+	
+}
+/* ----------- stylized ----------- */
+
+#cssdocumenta{
+	font-size: 17px;
+color:#555;
+	
+
+}
+
+#lblResponsabilidad{
+	cursor: none;
+text-decoration: initial;
+
+	color:#666666;
+	
+}
+
+#lblCorrige{
+	cursor: none;
+text-decoration: initial;
+	color:#666666;
+	
+}
+
+.evidencia{
+		cursor: none;
+text-decoration: initial;
+font-weight:bold;
+	color:#666666;
+	font-size: 15px;
+	
+}
+#cssdocumenta h1 {
+font:  29px BBVA Office Book;
+}
+#cssdocumenta p{
+color:#666666;
+margin-bottom:7px;
+border-bottom:solid 1px #b7ddf2;
+padding-bottom:10px;
+}
+#cssdocumenta label{
+display:block;
+font-weight:lighter;
+text-align:width;
+width:200px;
+float:left;
+}
+	
+#cssdocumenta .small{
+color:#666666;
+display:block;
+font-size:11px;
+font-weight:normal;
+text-align:right;
+width:140px;
+}
+
+#cssdocumenta input{
+	display:block;
+float:left;
+font-size:14px;
+padding:4px 2px;
+border:solid 0px #aacfe4;
+
+margin:2px 0 20px 10px;
+}
+
+
+#frmDocumentarCancelado_archivoEvidencia{
+	
+	
+	
+}
+#cssdocumenta button{
+clear:both;
+margin-left:150px;
+width:125px;
+height:31px;
+background:#666666 url(img/button.png) no-repeat;
+text-align:center;
+line-height:31px;
+color:#FFFFFF;
+font-size:11px;
+font-weight:bold;
+}
+
+	}
+	#stylized{
+
+border:solid 2px #ffffff;
+background:#ffffff;
+}
+#stylized h1 {
+font:  29px BBVA Office Book;
+}
+#stylized p{
+font-size:11px;
+color:#666666;
+margin-bottom:7px;
+border-bottom:solid 1px #b7ddf2;
+padding-bottom:10px;
+}
+#stylized label{
+display:block;
+font-weight:bold;
+text-align:width;
+width:142px;
+float:left;
+}
+#tablausuario{
+	
+	display:block;
+font-weight:bold;
+text-align:width;
+width:208px;
+
+}	
+	
+	
+#stylized .small{
+color:#666666;
+display:block;
+font-size:11px;
+font-weight:normal;
+text-align:right;
+width:140px;
+}
+
+#stylized input{
+	display:block;
+float:left;
+font-size:14px;
+padding:4px 2px;
+border:solid 1px #aacfe4;
+width:201px;
+margin:2px 0 20px 10px;
+}
+#stylized button{
+clear:both;
+margin-left:150px;
+width:125px;
+height:31px;
+background:#666666 url(img/button.png) no-repeat;
+text-align:center;
+line-height:31px;
+color:#FFFFFF;
+font-size:11px;
+font-weight:bold;
+}
+#stylized input[type="checkbox"] {
+	
+display:block;
+font-weight:bold;
+width:13px;
+float:left;
+}
+
+
+
+.centralbl{
+display:block;
+font-weight:bold;
+text-align:center;
+}
+
+.centralbl1{
+display:block;
+font-weight:bold;
+text-align:right;
+}
+
+.checkboxLabel {
+display:block;
+font-weight:bold;
+width:13px;
+float:left;
+}
+
+#lnkEnviarRecuperacion{
+	-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+	
+}
+
+
+#button1{
+	
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+}
+#button2{
+--moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+}
+
+#button3{
+	
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+}
+.ui-widget {
+font-family: BBVA Office Light, Arial;
+font-size: 16px;
+}
+
+.ui-button-text-only .ui-button-text {
+padding: .4em 1em;
+}
+
+
+.ui-widget-header {
+border: 1px solid #4297D7;
+background: #5C9CCC url(../images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50% repeat-x;
+color: white;
+font-weight: bold;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+border: 1px solid #C5DBEC;
+background: #DFEFFC url(../images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x;
+font-weight: bold;
+color: #2E6E9E;
+}
+
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #79b7e7; background: #d0e5f5 url(../images/ui-bg_glass_75_d0e5f5_1x400.png) 50% 50% repeat-x; font-weight: bold; color: #1d5987; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #1d5987; text-decoration: none; }
+ .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+color:#E17009;
+text-decoration: none;
+}
+.ui-datepicker {
+width: 17em;
+padding: .2em .2em 0;
+display: none;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+-moz-border-radius-bottomright: 5px;
+-webkit-border-bottom-right-radius: 5px;
+-khtml-border-bottom-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+.ui-helper-clearfix::after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+border: 1px solid 
+#79B7E7;
+background: 
+#F5F8F9 url(images/ui-bg_inset-hard_100_f5f8f9_1x100.png) 50% 50% repeat-x;
+font-weight: bold;
+color: 
+#E17009;
+}

@@ -1,0 +1,95 @@
+/* REXX */                        
+/*                                
+trace a     */                    
+                                  
+call TURNON_sdsf                  
+                                  
+say center("Escribe el JOBID ",70)
+pull id                           
+                                  
+call Obtener_jobs id              
+                                  
+call Leer                         
+                                  
+call TURNOFF_sdsf                 
+/* HACIENDO LLAMADAS AL SDSF */   
+                                  
+TURNON_sdsf:
+
+    rc_isf=isfcalls("ON")                                               
+   select                                                               
+        when rc_isf=00 then return                                      
+        when rc_isf=01 then msg_isf="Falla de Query. Ambiente no existe"
+        when rc_isf=02 then msg_isf="Falla al AGREGAR"                  
+        when rc_isf=03 then msg_isf="Falla al BORRAR"                   
+        otherwise do                                                    
+            msg_isf="ERROR DESCONOCIDO sdsf: " rc_isf                   
+        end                                                             
+    end                                                                 
+                                                                        
+        say "SDSF Error: "msg_isf                                       
+        retcode=rc_isf                                                  
+        signal finis                                                    
+    end                                                                 
+return
+
+Obtener_jobs:                      
+                                   
+/* Instrucciones al SPOOL */       
+                                   
+arg id                             
+                                   
+isfprefix = "*"                    
+isfowner="*"                       
+isffilter = "JOBID eq " id         
+                                   
+address SDSF "ISFEXEC ST (VERBOSE)"
+ ix=1                           
+   say "El Token es: " token.ix    
+   say "El jobname: "||jname.ix    
+                                   
+   return
+
+   Leer:                                                      
+                                                              
+/* Lee e imprime los datasets */                              
+                                                              
+/* Aquí alojo el PRUEBA10 */                                  
+"ALLOC F(ENTRADA) SHR REUSE DSN("'REXX.EXEC(PRUEBA10)'")"   
+                                                              
+/* Aqui lee todos los datos de PRUEBA5 y los coloco en el stem
+" jobid. " */                                                 
+"execio * diskr ENTRADA (finis stem jobid."    
+                                                              
+/*Aquí cierro el dataset que lei */                           
+"Execio 0 diskr ENTRADA (finis"               
+                                                              
+"Free F(ENTRADA)"
+
+/* aquí va la programación necesaria */      
+                                             
+/*                                           
+a = 0                                        
+do b = 1 to jobid.0                          
+   if pos("DSN=", jobid.b) = 0 then iterate  
+                                             
+      parse value jobid.b with . "DSN=" dsn .
+      parse value dsn with dsn "," .         
+                                             
+      a = a + 1                              
+      salida.a = dsn                         
+end                                          
+*/                                           
+                                             
+"Alloc F("salida") ds ("'REXX.EXEC(JOBS1)'")"
+"Execio * diskw "salida "(finis stem salida."
+"Free f(salida)"                            
+return 
+                                     
+                                            
+   TURNOFF_sdsf:                            
+       rc=isfcalls("OFF")                   
+   return                                   
+                                            
+   /* Guardar lo que se obtiene del SDSF */ 
+   /* ISFACT PARM */

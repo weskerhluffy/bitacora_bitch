@@ -1,0 +1,673 @@
+@CHARSET "UTF-8";
+
+table {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.tablaNormal{
+	
+	text-align:initial;
+}
+
+#header { padding: 55px 0px 0px; background: #ffffff url(../images/menu/headerm-bg.png) repeat-x bottom left; height: 97px; }
+
+#imgCargando{
+	margin: 4px auto ;
+	
+}
+
+.formimput{
+	position:relative;
+	top:27px;
+}
+.formimput1{
+	position:relative;
+	top:18px;
+}
+.ui-dialog .ui-dialog-titlebar {
+background:#00A3E4;
+padding: .4em 1em;
+position: relative;
+font-family:BBVA Office Light,Arial;
+text-align:center;
+font-size:18px;
+}
+
+#tblMoverCancelados{
+	
+position:relative;
+width:100%;
+text-align:center;
+font-family:BBVA Office Light,Arial;
+
+}
+#logMensajes{
+height: 130px;
+color:#931507;
+position:relative;
+width:100%;
+text-align:center;
+font-size: 18px;
+color:#E17009;
+font-family:BBVA Office Light,Arial;
+font-size:20px;
+}
+
+#userejemplo{
+font-family:BBVA Office Light,Arial;
+font-size:11px;
+color:#E17009;
+}
+#lnkRefrescarRetrasados{
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;	
+	
+}
+#lnkRefrescarHoldeados{
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+	
+}
+#lnkDocumentarCancelados{
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+	
+}
+
+#botones{
+	
+	position: absolute;
+	top:535px;
+	left:777px;
+}
+
+	
+td {
+	width: auto;
+	border-style: solid;
+	border-width: 0.5px;
+}
+
+.cancelacionDoc {
+	border-style: solid;
+	border-color: #000000;
+	border-width: 3px;
+}
+
+#tblCanceladosEnviados {
+	display: block;
+}
+
+.principal {
+	color:#E17009;
+}
+
+.campo {
+	display: block;
+}
+
+.tablaTree {
+	position:relative;
+	margin: center;
+text-align:center;
+border:0px;
+}
+
+	font-size: 16pt;
+}
+
+.tablaNormal {
+	width: auto;
+	text-align: left;
+	font-size: 60%;
+}
+
+.tablaNormal td {
+	vertical-align: text-top;
+}
+
+.errorMessage {
+	color: red;
+}
+
+.ui-corner-top {
+	font-size: 70%;
+}
+
+.ui-jqgrid-sortable {
+	font-size: 70%;
+}
+
+.ui-row-ltr {
+	font-size: 60%;
+}
+
+.jstree {
+	font-size: 60%;
+	text-align: left;
+}
+
+.ui-button-text {
+	font-size: 60%;
+}
+
+.nombreCampo {
+	font-size: 112%;
+	font-weight: bold;
+}
+
+.tablaMensajes {
+	width: auto;
+	text-align: left;
+	font-size: 80%;
+}
+
+.tablaHoldeado {
+	display: block;
+}
+
+.button3{
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+background:#7FC241;
+color:#ffffff;
+float:left;
+font-family:BBVA Office Light,Arial;
+font-size:13px;
+font-weight:bold;
+padding:8px 20px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+
+}
+
+.button3:hover{
+		
+background: -moz-linear-gradient(19% 65% 90deg,#0082AD, #0099CC, #0099CC 51%);
+background: -webkit-gradient(linear, 0% 45%, 0% 60%, from(#0099CC), to(#0082AD));
+color: #ffffff;
+cursor: pointer;
+
+}
+.campo1	{
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+background:#7FC241;
+color:#ffffff;
+float:left;
+font-family:BBVA Office Light,Arial;
+font-size:13px;
+font-weight:bold;
+padding:8px 20px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+
+}
+
+.campo1:hover{
+		
+background: -moz-linear-gradient(19% 65% 90deg,#0082AD, #0099CC, #0099CC 51%);
+background: -webkit-gradient(linear, 0% 45%, 0% 60%, from(#0099CC), to(#0082AD));
+color: #ffffff;
+cursor: pointer;
+
+}
+
+.button4{
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+background-image: url(../images/menu/navs.png) no-repeat;
+color:#ffffff;
+float:left;
+font-family:BBVA Office Light,Arial;
+font-size:13px;
+font-weight:bold;
+padding:8px 20px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+}
+
+.button4:hover{
+		
+background: -moz-linear-gradient(19% 65% 90deg,#0082AD, #0099CC, #0099CC 51%);
+background: -webkit-gradient(linear, 0% 45%, 0% 60%, from(#0099CC), to(#0082AD));
+color: #ffffff;
+cursor: pointer;
+
+}
+#Salir{
+	 position: absolute;
+	top:18px;
+	left:1020px;
+	z-index: 10;
+	font-size: 13px;
+color:#666;
+text-decoration: none;
+	
+}
+#Home{
+	
+	 position: absolute;
+	top:18px;
+	left:960px;
+		z-index: 10;
+	font-size: 13px;
+color:#666;
+text-decoration: none;
+}
+.username{
+	
+	position: absolute;
+	top: 210px;
+	left: 140px;
+	
+}
+
+
+.button {
+	background: -moz-linear-gradient(center top, #f3f3f3, #dddddd);
+	background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3),
+		to(#dddddd) );
+	background: -o-linear-gradient(top, #f3f3f3, #dddddd);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3',
+		EndColorStr='#dddddd' );
+	border-color: #000;
+	border-width: 1px;
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	color: #333;
+	cursor: pointer;
+	display: inline-block;
+	padding: 6px 6px 4px;
+	margin-top: 10px;
+	font: 12px;
+	width: 214px;
+}
+
+.button3{
+	position: absolute;
+	top: 265px;
+	left: 190px;
+	
+}
+
+.button:hover {
+	background: #ddd;
+}
+
+#newuser{
+	
+	position: absolute;
+	top: 115px;
+	left:130px;
+	
+	
+}
+
+#newproceso{
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	
+}
+#imagenewuser{
+	background-image: url(../images/botonnewuser1.png) no-repeat;
+	position: static;
+	top: 200px;
+	left: 250px;
+	
+	
+}
+
+.ui-widget-header {
+border: 1px solid #fff;
+background:#fff;
+font-weight: bold;
+}
+
+.ui-widget-content {
+border:2px;
+color: #222;
+}
+.ui-widget {
+font-family: BBA Office Light, Arial;
+font-size: 1.2em;
+}
+
+.ui-jqgrid .ui-jqgrid-title {
+float: initial;
+margin: .1em 0 .2em;
+font-family:BBVA Office Light,Arial;
+font-size:32px;
+color:#00A3E4;
+font-weight:normal;
+
+
+
+}
+
+
+/*boton top asignar en incidentes*/
+
+
+.ui-corner-top {
+font-size: 73%;
+}
+
+.ui-tabs .ui-tabs-nav {
+margin: 0;
+padding-left:150px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+border: 1px solid #C5DBEC;
+background:#fff;
+font: 13px BBVA Office Light, Arial;
+color: #555;
+font-weight: bold;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th div {
+overflow: hidden;
+position: relative;
+height: 18px;
+font-family:BBVA Office Light,Arial;
+font-size:14px;
+color: #555;
+font-weight: bold;
+}
+.ui-jqgrid tr.ui-row-ltr td {
+font: 13px BBVA Office Light, Arial;
+color:black;
+border-bottom: solid 1px #DBDBDB;
+border-left: solid 1px #DBDBDB;	
+text-align: left;
+border-right-width: 0px;
+border-right-color: inherit;
+border-right-style: solid;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th {
+
+border: 0px;
+height: 22px;
+padding: 0 2px 0 2px;
+}
+
+.ui-datepicker .ui-datepicker-header {
+background-color:#194D8E ;
+position: relative;
+padding: .2em 0;
+}
+.ui-jqgrid tr.jqgrow td {
+
+border-bottom-width: 0px;
+border-bottom: solid 1px #DBDBDB;
+border-left: solid 1px #DBDBDB;	
+text-align: left;
+border-right-width: 0px;
+border-right-color: inherit;
+border-right-style: solid;
+}
+#lnkRefrescarMensajes{
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+}
+#lnkRefrescarEspeciales{
+position:relative;
+left:300px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;	
+}
+#button3{
+	
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+}
+
+#button1{
+	
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+}
+#button2{
+	
+--moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+}
+
+#lnkMoverCancelados{
+	
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+}
+.ui-dialog .ui-dialog-title {
+float: initial;
+margin: .1em 16px .1em 0;
+}
+
+#button2{
+	
+--moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:5px;
+-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+background: #7FC241;
+color:#ffffff;
+font-family:BBVA Office Light,Arial;
+font-size:22px;
+font-weight:bold;
+padding:0px 40px;
+cursor: pointer;
+z-index: 8;
+display: inline-block;
+zoom: 1;
+text-transform: capitalize;
+text-shadow: #6AA332 1px 1px 1px;
+}
+
+/*titulo de la tabla de incidentes*/
+.ui-jqgrid .ui-jqgrid-htable {
+
+table-layout: fixed;
+margin: 0em;
+}
+
+/*cotenido de la tabla de incidentes*/
+
+.ui-jqgrid .ui-jqgrid-btable {
+table-layout: fixed;
+margin: 0em;
+outline-style: none;
+}
+
+
+/*cursor de acordion , no deje poner cursor*/
+.jstree a {
+
+display: inline-block;
+line-height: 19px;
+height: 17px;
+color: black;
+white-space: nowrap;
+text-decoration: none;
+padding: 1px 2px;
+margin: 0;
+}
+.jstree a: focus {
+width:0px;height:0px;outline:0px;
+}
+/*cursos pointer al icono fecha de acordion*/
+
+.jstree ins {
+cursor: pointer;
+display: inline-block;
+text-decoration: none;
+width: 18px;
+height: 18px;
+margin: 2px 0 0 0;
+padding: 0;
+}
+
+/*cursor de acordion carpetita , no deje poner cursor*/
+
+	.jstree-default a .jstree-icon {
+cursor: not-allowed;
+background-position: -56px -19px;
+}
+
+.ui-accordion .ui-accordion-content {
+
+padding: 1em 2.2em;
+border-top: 0;
+margin-top: -2px;
+position: relative;
+top: 1px;
+margin-bottom: 2px;
+overflow: auto;
+display: none;
+zoom: 1;
+}
+
+#responsabilidad{
+	
+	font-family:BBVA Office Book,Arial;
+font-size:17px;
+}

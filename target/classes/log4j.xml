@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="log_bitacora" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/tmp/bitacacacora.log" />
+		<param name="MaxFileSize" value="50MB" />
+		<param name="MaxBackupIndex" value="10" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy MM dd HH:mm:ss} %c %M - %m %n %p" />
+		</layout>
+	</appender>
+
+	<appender name="chainsaw" class="org.apache.log4j.net.SocketAppender">
+		<param name="remoteHost" value="localhost" />
+		<param name="port" value="4445" />
+		<param name="locationInfo" value="true" />
+	</appender>
+
+	<logger name="org.springframework">
+		<level value="warn" />
+	</logger>
+	<logger name="org.hibernate">
+		<level value="warn" />
+	</logger>
+	<logger name="freemarker">
+		<level value="warn" />
+	</logger>
+	<logger name="org.jboss">
+		<level value="warn" />
+	</logger>
+	<logger name="net.sf">
+		<level value="error" />
+	</logger>
+
+	<logger name="org.apache">
+		<level value="warn" />
+	</logger>
+
+	<logger name="com.opensymphony">
+		<level value="warn" />
+	</logger>
+
+	<logger name="com.mchange">
+		<level value="warn" />
+	</logger>
+
+	<category name="org.directwebremoting">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.directwebremoting.log.accessLog">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.directwebremoting.log.startup">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.directwebremoting.log.scripts">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.directwebremoting.log.session">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.directwebremoting.spring">
+		<priority value="warn" />
+	</category>
+
+	<logger
+		name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.controller.CatalogoGenericoController">
+		<level value="warn" />
+	</logger>
+	<logger name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.dao">
+		<level value="warn" />
+	</logger>
+	<logger name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.util">
+		<level value="warn" />
+	</logger>
+	<logger name="mx.bbva.ccr.intranet.bitacoraProduccion.batch.converter">
+		<level value="warn" />
+	</logger>
+
+	<root>
+		<level value="warn" />
+		<!-- <appender-ref ref="chainsaw" /> -->
+		<appender-ref ref="log_bitacora" />
+	</root>
+
+</log4j:configuration>

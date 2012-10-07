@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    http://www.directwebremoting.org/schema/spring-dwr http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd
+    http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://jboss.com/products/seam/spring-seam
+	http://jboss.com/products/seam/spring-seam-2.2.xsd"
+	default-autowire="byName" default-lazy-init="true">
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.bytecode.use_reflection_optimizer">
+					false
+				</prop>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.DB2Dialect
+				</prop>
+				<prop key="hibernate.show_sql">
+					true
+				</prop>
+				<prop key="transaction.factory_class">
+					org.hibernate.transaction.JDBCTransactionFactory
+				</prop>
+				<prop key="hibernate.current_session_context_class">
+					thread
+				</prop>
+				<prop key="hibernate.default_schema">
+					GBP001
+				</prop>
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</prop>
+				<prop key="net.sf.ehcache.configurationResourceName">/ehcache.xml</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Empresa
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Area</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Bitacora
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Documentacion
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.CanceladoDocumentacion
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Cancelado
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Turno
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Estado
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Problema
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Usuario
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Permiso
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Perfil
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.EmpresaUsuario
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.PermisoPerfil
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.UsuarioPerfil
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.UsuarioPermiso
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Origen
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.TipoProcesoEspecial
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Evidencia
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.DiaInhabil
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Holdeado
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.DocumentacionHoldeado
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Mensaje
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.TipoMensaje
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.CargaDatos
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.ProcesoRetrasado
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.DocumentacionProcesoRetrasado
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.ProcesoEspecial
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.SeguimientoProcesoEspecial
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.DocumentacionSeguimientoProcesoEspecial
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.RetrasadoDocumentacion
+				</value>
+				<value>mx.bbva.ccr.intranet.bitacoraProduccion.batch.vo.Usuarioldap
+				</value>
+			</list>	
+		</property>
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager" />
+
+	<tx:annotation-driven transaction-manager="transactionManager"
+		proxy-target-class="false" />
+	<context:component-scan base-package="mx.bbva.ccr.intranet.bitacoraProduccion.batch" />
+	<context:property-placeholder location="classpath:jdbc.properties" />
+
+	<bean id="log4jInitializer"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod"
+			value="org.springframework.util.Log4jConfigurer.initLogging" />
+		<property name="arguments">
+			<list>
+				<value>src/test/resources/log4j.properties</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>
+

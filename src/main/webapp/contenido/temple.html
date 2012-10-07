@@ -1,0 +1,69 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="../styles/temple.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+<script>
+$(document).ready(function() {
+	$('a.login-window').click(function() {	
+		
+                //Getting the variable's value from a link 
+		var loginBox = $(this).attr('href');
+
+		//Fade in the Popup
+		$(loginBox).fadeIn(300);
+		
+		//Set the center alignment padding + border see css style
+		var popMargTop = ($(loginBox).height() + 24) / 2; 
+		var popMargLeft = ($(loginBox).width() + 24) / 2; 
+		
+		$(loginBox).css({ 
+			'margin-top' : -popMargTop,
+			'margin-left' : -popMargLeft
+		});
+		
+		// Add the mask to body
+		$('body').append('<div id="mask"></div>');
+		$('#mask').fadeIn(300);
+		
+		return false;
+	});
+	
+	// When clicking on the button close or the mask layer the popup closed
+	$('a.close, #mask').live('click', function() { 
+	  $('#mask , .login-popup').fadeOut(300 , function() {
+		$('#mask').remove();  
+	}); 
+	return false;
+	});
+});
+
+</script>
+
+</head>
+<body>
+<a href="#login-box" class="login-window">BITACORA DE PRODUCCION</a>
+
+<div id="login-box" class="login-popup">
+        <a href="#" class="close"><img src="close_pop.png" class="btn_close" title="Cerrar Ventana" alt="Close" /></a>
+          <form method="post" class="signin" action="#">
+                <fieldset class="textbox">
+            	<label class="username">
+                <span>USUARIO</span>
+                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Usuario">
+                </label>
+                <label class="password">
+                <span>CONTRASEÑA</span>
+                <input id="password" name="password" value="" type="password" placeholder="Contraseña">
+                </label>
+                <button class="submit button" type="button">ENTRAR</button>
+                <p>
+                <a class="forgot" href="#">CAMBIAR CONTRASEÑA</a>
+                </p>        
+                </fieldset>
+          </form>
+</div>
+</body>
+</html>
+

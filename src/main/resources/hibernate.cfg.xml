@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.ibm.db2.jcc.DB2Driver</property>
+        <property name="hibernate.connection.password">dbsbbp12</property>
+        <property name="hibernate.connection.url">jdbc:db2://150.250.250.12:60028/bbpbp001</property>
+        <property name="hibernate.connection.username">dbsbbp</property>
+        <property name="hibernate.default_schema">GBP001</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.DB2Dialect</property>
+    </session-factory>
+</hibernate-configuration>

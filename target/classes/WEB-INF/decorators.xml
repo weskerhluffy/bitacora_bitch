@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+	<excludes>
+		<pattern>/styles/*</pattern>
+		<pattern>/scripts/*</pattern>
+		<pattern>/images/*</pattern>
+		<pattern>/dwr/*</pattern>
+		<pattern>/gestionar-mensaje.xhtml*</pattern>
+		<pattern>/documentacion-holdeado.xhtml*</pattern>
+		<pattern>/documentacion-proceso-retrasado.xhtml*</pattern>
+		<pattern>/documentacion-seguimiento-proceso-especial.xhtml*</pattern>
+		
+	</excludes>
+
+	<decorator name="layout" page="layout.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+
+	<decorator name="layoutEmbebido" page="layoutEmbebido.jsp">
+		<pattern>/documentacion-holdeado/*</pattern>
+		<pattern>/gestionar-mensaje/*</pattern>
+		<pattern>/documentacion-proceso-retrasado/*</pattern>
+		<pattern>/documentacion-seguimiento-proceso-especial/*</pattern>
+		<pattern>/contenido/login*</pattern>
+		<pattern>/login*</pattern>
+		<pattern>/contenido/login.jsp*</pattern>
+		
+	</decorator>
+</decorators> 
